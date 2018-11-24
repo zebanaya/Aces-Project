@@ -4,17 +4,26 @@ import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
+import { FooterComponent } from './footer/footer.component';
+import { AlertifyService } from './_services/alertify.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
    declarations: [
       AppComponent,
-      NavComponent
+      NavComponent,
+      FooterComponent,
+      ContactUsComponent,
    ],
    imports: [
       BrowserModule,
-      NgxPageScrollModule
+      NgxPageScrollModule,
+      ReactiveFormsModule
    ],
-   providers: [],
+   providers: [
+      AlertifyService
+   ],
    bootstrap: [
       AppComponent
    ]
